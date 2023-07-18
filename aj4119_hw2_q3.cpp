@@ -3,7 +3,8 @@
 #include<iostream>
 using namespace std;
 int johnDays,johnHours,johnMinutes,billDays,billHours,billMinutes;
-int totalDays,totalHours,totalMinutes;
+const int MAX_HOURS=24;    //Hours to Days conversion factor
+const int MAX_MINUTES=60;  //Minutes to Hours conversion factor
 int main()
 {
     cout<<"Please enter the number of days John has worked:";
@@ -21,23 +22,21 @@ int main()
     cout<<"Please enter the number of minutes Bill has worked:";
     cin>>billMinutes;
     cout<<"\n";
-    totalMinutes=johnMinutes+billMinutes;
-    totalHours=johnHours+billHours;
-    totalDays=johnDays+billDays;
-    if(totalMinutes>60)
+    int totalMinutes = johnMinutes + billMinutes;
+    int totalHours = johnHours + billHours;
+    int totalDays = johnDays + billDays;
+    if(totalMinutes > MAX_MINUTES)
     {
-        totalMinutes=totalMinutes-60;
+        totalMinutes = totalMinutes - MAX_MINUTES;
         ++totalHours;
     }
-    if(totalHours>24)
+    if(totalHours > MAX_HOURS)
     {
-        totalHours=totalHours-24;
+        totalHours = totalHours - MAX_HOURS;
         ++totalDays;
     }
-    
     cout<<"The total time both of them worked together is: "
         <<totalDays<<" days, "<<totalHours<<" hours and "
         <<totalMinutes<<" minutes";
-    
     return 0;
 }

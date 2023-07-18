@@ -3,7 +3,10 @@
 #include<iostream>
 using namespace std;
 int numPennies,numQuarters,numDimes, numNickels;
-int sumInPennies,numDollars,numCents;
+const int QUARTERS_TO_PENNIES=25;   //factor to convert Quarter to pennies
+const int DIMES_TO_PENNIES=10;      //factor to convert Dimes to pennies
+const int NICKELS_TO_PENNIES=5;     //factor to convert Nickels to pennies
+const int DOLLARS_TO_PENNIES=100;   //factor to convert Dollars to pennies
 int main()
 {
     cout<<"Please enter the number of coins\n";
@@ -15,9 +18,9 @@ int main()
     cin>>numNickels;
     cout<<"# of pennies: ";
     cin>>numPennies;  
-    sumInPennies=numQuarters*25+numDimes*10+numNickels*5+numPennies;
-    numDollars=sumInPennies/100;
-    numCents=sumInPennies%100;   
+    int sumInPennies = numQuarters * QUARTERS_TO_PENNIES + numDimes * DIMES_TO_PENNIES + numNickels * NICKELS_TO_PENNIES + numPennies;
+    int numDollars = sumInPennies / DOLLARS_TO_PENNIES;
+    int numCents = sumInPennies % DOLLARS_TO_PENNIES;   
     cout<<"The total is "<<numDollars<<" dollars and "<<numCents<<" cents\n"; 
     return 0;  
 }
