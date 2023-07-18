@@ -2,9 +2,9 @@
 // Last updated: 2023-07-17
 #include<iostream>
 using namespace std;
-int johnDays,johnHours,johnMinutes,billDays,billHours,billMinutes;
 const int MAX_HOURS=24;    //Hours to Days conversion factor
 const int MAX_MINUTES=60;  //Minutes to Hours conversion factor
+int johnDays,johnHours,johnMinutes,billDays,billHours,billMinutes;
 int main()
 {
     cout<<"Please enter the number of days John has worked:";

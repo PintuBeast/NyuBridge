@@ -2,11 +2,11 @@
 // Last updated: 2023-07-17
 #include<iostream>
 using namespace std;
-int numDollars,numCents;
 const int QUARTERS_TO_PENNIES=25;   //factor to convert Quarter to pennies
 const int DIMES_TO_PENNIES=10;      //factor to convert Dimes to pennies
 const int NICKELS_TO_PENNIES=5;     //factor to convert Nickels to pennies
 const int DOLLARS_TO_PENNIES=100;   //factor to convert Dollars to pennies
+int numDollars,numCents;
 int main()
 {
     cout<<"Please enter your amount in the format of dollars and cents seperated by a space:\n";
