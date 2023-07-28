@@ -15,7 +15,7 @@ int main()
     double decimalPart;
     integerPart=number;
     decimalPart=number-integerPart;
-    if(decimalPart<0)
+    if(decimalPart < 0)
     {
         decimalPart = decimalPart * -1;
     }
@@ -35,14 +35,14 @@ int main()
             }
             else
             {
-                cout<<integerPart-1;
+                cout<<integerPart - 1;
                 break;
             }
 
         case 2:
             if(number>0)
             {
-                cout<<integerPart+1;
+                cout<<integerPart + 1;
                 break;
             }
             else
@@ -54,14 +54,14 @@ int main()
         case 3:            
             if(number>0)
             {
-                if(decimalPart<0.50)
+                if(decimalPart < 0.50)
                 {
                     cout<<integerPart;
                     break;
                 }
-                else if(decimalPart>0.50)
+                else if(decimalPart > 0.50)
                 {
-                    cout<<integerPart+1;
+                    cout<<integerPart + 1;
                     break;
                 }
                 else if(decimalPart == 0.50)
@@ -70,16 +70,16 @@ int main()
                     break;
                 }
             }
-            else if(number<0)
+            else if(number < 0)
             {
-                if(decimalPart<0.50)
+                if(decimalPart < 0.50)
                 {
                     cout<<integerPart;
                     break;
                 }
-                else if(decimalPart>0.50)
+                else if(decimalPart > 0.50)
                 {
-                    cout<<integerPart-1;
+                    cout<<integerPart - 1;
                     break;
                 }
                 else if(decimalPart == 0.50)

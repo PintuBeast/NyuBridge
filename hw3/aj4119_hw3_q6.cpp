@@ -41,8 +41,9 @@ int main()
             break;
         case 's':
         case 'S':
-            cout<<"The cost of the call is: "<<WEEKEND_RATE*callDuration;    
+            cout<<"The cost of the call is: "<<WEEKEND_RATE*callDuration;  
+            break;  
     }
-
+return 0;
 
 }
