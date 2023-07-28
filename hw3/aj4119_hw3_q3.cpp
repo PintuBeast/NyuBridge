@@ -43,6 +43,6 @@ int main()
          cout<<"This equation has a single real solution x= "<<-1*b/(2*a);
     }
 
-
+return 0;
 
 }
