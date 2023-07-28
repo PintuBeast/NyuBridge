@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
-const double clubDiscountRate=0.9;
-const double offerDiscountRate=0.5;
+const double CLUB_DISCOUNT_RATE=0.9;
+const double OFFER_DISCOUNT_RATE=0.5;
 int main()
 {
     double priceOfItem1,priceOfItem2,taxRate,lowerPrice,higherPrice;
@@ -33,14 +33,14 @@ int main()
     {
         case 'y':
         case 'Y':
-            discountedPrice=(higherPrice+offerDiscountRate*lowerPrice)*clubDiscountRate;
+            discountedPrice=(higherPrice+OFFER_DISCOUNT_RATE*lowerPrice)*CLUB_DISCOUNT_RATE;
             break;
         case 'n':
         case 'N':
-            discountedPrice=(higherPrice+offerDiscountRate*lowerPrice);
+            discountedPrice=(higherPrice+OFFER_DISCOUNT_RATE*lowerPrice);
             break;               
         default:
-            discountedPrice=(higherPrice+offerDiscountRate*lowerPrice);    
+            discountedPrice=(higherPrice+OFFER_DISCOUNT_RATE*lowerPrice);    
 
     }
     cout<<"Price after discounts: "<<discountedPrice<<"\n";
